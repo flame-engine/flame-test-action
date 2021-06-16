@@ -10,5 +10,6 @@ runs:
   using: 'composite'
   steps:
     - run: sudo apt-get install lcov -y
+      shell: bash
     - run: ${{ github.action_path }}/scripts/test.sh
       shell: bash
