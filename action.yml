@@ -1,0 +1,14 @@
+name: 'Flame Test'
+description: 'An opinionated action that validates tests on a Flutter project'
+author: 'flame-engine'
+
+branding:
+  color: red
+  icon: code
+
+runs:
+  using: 'composite'
+  steps:
+    - run: sudo apt-get install lcov -y
+    - run: ${{ github.action_path }}/scripts/test.sh
+      shell: bash
